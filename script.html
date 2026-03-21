@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Student programming web - learning front-end">
+  <meta name="description" content="Web-page-ES6">
+  <title>PAGE WEB ES6</title>
+</head>
+<body data-theme="light">
+<script>
+const b = document.body;
+
+const style_root = document.createElement("style");
+style_root.innerHTML = `
+:root {
+  --theme-dark-: #000;
+  --theme-light-: #fff;
+}
+body[data-theme="dark"]{
+  background-color: var(--theme-dark-);
+  color: var(--theme-light-);
+  transition: 0.8s;
+}
+@keyframes o {
+ 0% {
+   filter: hue-rotate(180deg);
+ }
+100% {
+  filter: hue-rotate(360deg);
+ }
+}
+.animation {
+  animation: o 7s linear infinite;
+}
+`;
+document.head.appendChild(style_root);
+
+const ajax_font = document.createElement("link");
+ajax_font.rel = "stylesheet";
+ajax_font.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
+document.head.appendChild(ajax_font);
+
+function BROWSER_WEB(element, style){
+  Object.entries(style).forEach(([props, value]) => {
+    element.style[props] = value;
+  });
+};
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  BROWSER_WEB(b, {
+    height: "100vh",
+    padding: "0",
+    margin: "0",
+    boxSizing: "border-box",
+    fontFamily: "sans-serif",
+    backgroundColor: "var(--theme-dark-);",
+    color: "var(--theme-light-);"
+  });
+
+  const HEADER_CARD = document.createElement("header");
+  BROWSER_WEB(HEADER_CARD, {
+    position: "absolute",
+    top: "0",
+    right: "0",
+    left: "0",
+    height: "170px",
+    width: "100%",
+    backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOB_jcTobzPDdmhuVBfQKqeIdWs3h_FBtW6aW_AiuzGIq9wtRIfOF5BNA&s=10')`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    objectFit: "cover",
+    border: "4px solid #000",
+    boxShadow: "2px 2px 18px #000"
+  });
+  b.appendChild(HEADER_CARD);
+
+  const SUB_TITLE = document.createElement("h1");
+  SUB_TITLE.innerHTML = "DEV - ALEXANDRE";
+  SUB_TITLE.className = "animation";
+
+  const SUB_TITLE_BLOCK = {
+    visibility: "hidden",
+    opacity: "0"
+  };
+
+  const SUB_TITLE_NONE = {
+    visibility: "visible",
+    opacity: "10"
+  };
+
+  BROWSER_WEB(SUB_TITLE, {
+    textAlign: "center",
+    fontSize: "24px",
+    fontWeight: "900",
+    textDecoration: "4px underline transparent",
+    webkitTextStroke: "0.4px #000",
+    transform: "translateY(-11px)",
+    backgroundClip: "text",
+    webkitBackgroundClip: "text",
+    webkitFillColor: "transparent",
+    backgroundImage: "linear-gradient(to left, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)",
+    color: "transparent",
+    textShadow: "2px 4px 17px #000"
+  });
+  HEADER_CARD.appendChild(SUB_TITLE);
+
+  const icons_usrs = {
+    fontSize: "25px",
+    backgroundColor: "transparent",
+    color: "#fff",
+    border: "none"
+  };
+
+  const MENU_USR = document.createElement("button");
+  MENU_USR.innerHTML = "";
+
+  const ICON_MENU = document.createElement("i");
+  ICON_MENU.className = "fa-solid fa-bars";
+
+  BROWSER_WEB(MENU_USR, icons_usrs);
+  BROWSER_WEB(MENU_USR, {
+    position: "absolute",
+    top: "135px"
+  });
+
+  const nav_links_web = document.createElement("nav");
+  BROWSER_WEB(nav_links_web, {
+    display: "none",
+    width: "150px"
+  });
+
+  let toggle = true;
+
+  ICON_MENU.addEventListener("click", () => {
+    if (nav_links_web.style.display == "none") {
+      BROWSER_WEB(nav_links_web, {
+        display: "block",
+        position: "relative",
+        left: "-35px",
+        bottom: "3.4pc",
+        textShadow: "2px 4px 8px #fff"
+      });
+      BROWSER_WEB(SUB_TITLE, SUB_TITLE_BLOCK);
+      ICON_MENU.classList.replace("fa-bars", "fa-times");
+      toggle = false;
+    } else {
+      BROWSER_WEB(nav_links_web, {
+        display: "none"
+      });
+      BROWSER_WEB(SUB_TITLE, SUB_TITLE_NONE);
+      ICON_MENU.classList.replace("fa-times", "fa-bars");
+      toggle = true;
+    }
+  });
+
+  MENU_USR.appendChild(ICON_MENU);
+  HEADER_CARD.appendChild(MENU_USR);
+
+  const LINKS_MENU = [
+    { TEXT: "PÁGINA", HREF: "#" },
+    { TEXT: "SOBRE", HREF: "#" },
+    { TEXT: "SERVIÇOS", HREF: "#" }
+  ];
+
+  HEADER_CARD.appendChild(nav_links_web);
+
+  LINKS_MENU.forEach((link) => {
+    const ul_links_web = document.createElement("ul");
+    const li_links_web = document.createElement("li");
+    const links_web = document.createElement("a");
+
+    links_web.innerHTML = link.TEXT;
+    links_web.href = link.HREF;
+
+    const ul_links_web_styles = {
+      listStyle: "none"
+    };
+
+    const links_web_styles = {
+      textDecoration: "none",
+      fontWeight: "900",
+      color: "#fff",
+      fontSize: "20px"
+    };
+
+    BROWSER_WEB(ul_links_web, ul_links_web_styles);
+    BROWSER_WEB(links_web, links_web_styles);
+
+    nav_links_web.appendChild(ul_links_web);
+    ul_links_web.appendChild(li_links_web);
+    li_links_web.appendChild(links_web);
+  });
+
+  const DATA_THEME = document.createElement("button");
+  DATA_THEME.innerHTML = "";
+
+  BROWSER_WEB(DATA_THEME, icons_usrs);
+  BROWSER_WEB(DATA_THEME, {
+    position: "absolute",
+    top: "136px",
+    right: "3px"
+  });
+
+  const ICON_THEME = document.createElement("i");
+  ICON_THEME.className = "fa fa-sun";
+
+  ICON_THEME.addEventListener("click", () => {
+    const a = b.getAttribute("data-theme");
+    const n = a === "dark" ? "light" : "dark";
+    b.setAttribute("data-theme", n);
+    ICON_THEME.classList.toggle("fa-moon");
+  });
+
+  DATA_THEME.appendChild(ICON_THEME);
+  HEADER_CARD.appendChild(DATA_THEME);
+
+  const CS = document.createElement("canvas");
+  const CX = CS.getContext("2d");
+
+  CS.width = 328;
+  CS.height = 220;
+
+  BROWSER_WEB(CS, {
+    position: "relative",
+    top: "0",
+    marginTop: "200px",
+    marginBottom: "50px",
+    backgroundColor: "black"
+  });
+
+  const URL_PHOTO = [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3RMAY16R6R77zTeBcucspFtqbrdxYxnjCWYEBpMzgA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyd-ONAmmyIB5fpVyinqu5JA4XRrnCEhUOpwXWUKkm7w&s=10"
+  ];
+
+  function BROWSER_IMG(src, x, y){
+    const photo = new Image();
+    photo.src = src;
+    photo.onload = () => {
+      CX.drawImage(photo, x, y, CS.height, CS.width);
+    };
+  };
+
+  BROWSER_IMG(URL_PHOTO[0], 0, 0);
+  BROWSER_IMG(URL_PHOTO[1], 100, 40);
+
+  b.appendChild(CS);
+
+  const TEXT_CARD = document.createElement("p");
+  TEXT_CARD.innerText = "JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional).[2][3] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.[4] É atualmente a principal linguagem para programação client-side em navegadores web.";
+
+  const DIV_CARD_LAYOUT = document.createElement("div");
+  const DIV_CARD_TEXT = document.createElement("div");
+
+  DIV_CARD_LAYOUT.appendChild(DIV_CARD_TEXT);
+  DIV_CARD_TEXT.appendChild(TEXT_CARD);
+  b.appendChild(DIV_CARD_LAYOUT);
+
+  BROWSER_WEB(DIV_CARD_LAYOUT, {
+    position: "relative",
+    top: "0",
+    marginTop: "20px",
+    padding: "20px"
+  });
+
+  BROWSER_WEB(DIV_CARD_TEXT, {
+    textAlign: "justify",
+    borderRadius: "10px",
+    fontWeight: "900"
+  });
+
+  const FOOT_CARD = document.createElement("footer");
+  BROWSER_WEB(FOOT_CARD, {
+    position: "relative",
+    marginTop: "20px"
+  });
+
+  DIV_CARD_LAYOUT.appendChild(FOOT_CARD);
+
+  const FOOT = document.createElement("p");
+  FOOT.innerText = "DIREITOS RESERVADOS: DEV ALEXANDRE";
+
+  BROWSER_WEB(FOOT, {
+    textAlign: "center",
+    fontSize: "9px",
+    fontWeight: "900"
+  });
+
+  FOOT_CARD.appendChild(FOOT);
+
+});
+</script>
+</body>
+</html>
