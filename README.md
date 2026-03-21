@@ -1,3 +1,7 @@
 # Entertainment-page-created-with-ES6
 
 ***EM DESENVOLVIMENTO***
+
+NÃO É RESPONSIVO PARA TELAS MAIORES, ***TABLET / DESKTOP***
+
+# PROJETO WEB - ENTRETENIMENTO 
