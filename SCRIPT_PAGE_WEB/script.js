@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
     height: "192px",
     width: "100%",
     marginBottom: "140px",
-    backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOB_jcTobzPDdmhuVBfQKqeIdWs3h_FBtW6aW_AiuzGIq9wtRIfOF5BNA&s=10')`,
+    backgroundImage: `url('../Media/HEADER_PHOTO.jpeg')`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     objectFit: "cover",
@@ -265,8 +265,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   const URL_PHOTO = [
-    "212054677.jpg",
-    "212351399.jpg"
+    "../Media/212054677.jpg",
+    "../Media/212351399.jpg"
   ];
   
   function BROWSER_IMG(src, x, y, w, z) {
