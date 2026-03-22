@@ -1,4 +1,3 @@
-
 const b = document.body;
 
 const  STYLE_ROOT = document.createElement("style");
