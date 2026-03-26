@@ -139,8 +139,8 @@ document.head.appendChild(AJAX_FONT);
 function BROWSER_WEB(element, style) {
   Object.entries(style).forEach(([props, value]) => {
     element.style[props] = value;
-  });
-}
+  })
+};
 
 document.addEventListener("DOMContentLoaded", function () {
 
