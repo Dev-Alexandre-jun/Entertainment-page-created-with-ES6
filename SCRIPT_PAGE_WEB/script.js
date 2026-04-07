@@ -139,7 +139,7 @@ document.head.appendChild(AJAX_FONT);
 function BROWSER_WEB(element, style) {
   Object.entries(style).forEach(([props, value]) => {
     element.style[props] = value;
-  })
+  });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
       BROWSER_WEB(SUB_TITLE, SUB_TITLE_NONE);
       ICON_MENU.classList.replace("fa-times", "fa-bars");
       toggle = true;
-    }
+    };
   });
 
   MENU_USR.appendChild(ICON_MENU);
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         break;
       default:
-    }
+    };
   });
 
   const DATA_THEME = document.createElement("button");
@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
     photo.onload = () => {
       CX.drawImage(photo, x, y, w, z);
     };
-  }
+  };
 
   BROWSER_IMG(URL_PHOTO[0], 1, 1, 167.8, 218.7);
   BROWSER_IMG(URL_PHOTO[1], 169, 1, 158, 219);
