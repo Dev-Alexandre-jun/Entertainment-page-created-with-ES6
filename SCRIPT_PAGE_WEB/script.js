@@ -294,10 +294,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const PHOTO = [
-    "../Media/28287372737.jpg",
-    "../Media/180223505.jpg",
-    "../Media/9183742774723.jpg",
-    "../Media/026050827733.jpg"
+    "../Media/81737283733.jpg",
+    "../Media/8273828328.jpg",
+    "../Media/103768283.jpg",
+    "../Media/19736492737923.jpg"
   ];
 
   const GAME = document.createElement("canvas");
