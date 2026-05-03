@@ -23,12 +23,8 @@ body[data-theme="dark"] {
 }
 
 @keyframes o {
-  0% {
-    filter: hue-rotate(180deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-  }
+  0% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
 }
 
 .animation {
@@ -36,99 +32,42 @@ body[data-theme="dark"] {
 }
 
 @media (min-width: 720px) and (max-width: 1024px) {
-  header {
-    min-height: 300px;
-    height: 100%;
-  }
-  nav {
-    transform: translate(40px, 30px);
-  }
-  i {
-    font-size: 34px;
-    margin-top: 105px;
-  }
-  canvas {
-    width: 50%;
-    transform: translate(250px, 150px);
-  }
-  .div_card {
-    font-size: 24px;
-  }
-  .description_canvas {
-    margin-top: 150px;
-  }
-  footer {
-    font-size: 20px;
-  }
+  header { min-height: 300px; height: 100%; }
+  nav { transform: translate(40px, 30px); }
+  i { font-size: 34px; margin-top: 105px; }
+  canvas { width: 50%; transform: translate(250px, 150px); }
+  .div_card { font-size: 24px; }
+  .description_canvas { margin-top: 150px; }
+  footer { font-size: 20px; }
 }
 
 @-moz-document url-prefix() {
   @media (max-width: 500px) {
-    html, body {
-      width: 100%;
-      max-width: auto;
-      overflow-x: hidden;
-    }
-    header {
-      max-width: 100%;
-      width: auto;
-    }
-    canvas {
-      width: 272px;
-      margin-left: 7px;
-    }
-    .div_card {
-      max-width: 100 %;
-      width: auto;
-      font-size: 14px;
-    }
-    footer {
-      font-size: 8px;
-    }
+    html, body { width: 100%; max-width: auto; overflow-x: hidden; }
+    header { max-width: 100%; width: auto; }
+    canvas { width: 272px; margin-left: 7px; }
+    .div_card { max-width: 100 %; width: auto; font-size: 14px; }
+    footer { font-size: 8px; }
   }
 }
 
 @-moz-document url-prefix() {
   @media (min-width: 720px) and (max-width: 1024px) {
-    header {
-      width: auto;
-    }
-    nav {
-      transform: translate(40px, 30px);
-    }
-    #data_theme {
-      position: relative;
-      right: 18px;
-    }
-    canvas {
-      margin-left: -20px;
-    }
-    .div_card {
-      font-size: 28px;
-      min-width: 100%;
-      width: auto;
-    }
-    footer {
-      font-size: 14px;
-      color: red;
-    }
+    header { width: auto; }
+    nav { transform: translate(40px, 30px); }
+    #data_theme { position: relative; right: 18px; }
+    canvas { margin-left: -20px; }
+    .div_card { font-size: 28px; min-width: 100%; width: auto; }
+    footer { font-size: 14px; color: red; }
   }
 }
 
 @media (min-width: 1025px) {
-  canvas {
-    position: absolute;
-    left: 41.6%;
-  }
-  .div_card {
-    font-size: 29px;
-  }
-  footer {
-    font-size: 18px;
-  }
+  canvas { position: absolute; left: 41.6%; }
+  .div_card { font-size: 29px; }
+  footer { font-size: 18px; }
 }
 `;
-
 document.head.appendChild(STYLE_ROOT);
 
 const AJAX_FONT = document.createElement("link");
@@ -140,7 +79,7 @@ function BROWSER_WEB(element, style) {
   Object.entries(style).forEach(([props, value]) => {
     element.style[props] = value;
   });
-};
+}
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -165,22 +104,14 @@ document.addEventListener("DOMContentLoaded", function () {
     border: "4px solid #000",
     boxShadow: "2px 2px 18px #000"
   });
-
   b.appendChild(HEADER_CARD);
 
   const SUB_TITLE = document.createElement("h1");
   SUB_TITLE.innerText = "DEV - ALEXANDRE";
   SUB_TITLE.className = "animation";
 
-  const SUB_TITLE_BLOCK = {
-    visibility: "hidden",
-    opacity: "0"
-  };
-
-  const SUB_TITLE_NONE = {
-    visibility: "visible",
-    opacity: "1"
-  };
+  const SUB_TITLE_BLOCK = { visibility: "hidden", opacity: "0" };
+  const SUB_TITLE_NONE = { visibility: "visible", opacity: "1" };
 
   BROWSER_WEB(SUB_TITLE, {
     textAlign: "center",
@@ -196,12 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
     color: "transparent",
     textShadow: "2px 4px 17px #000"
   });
-
   HEADER_CARD.appendChild(SUB_TITLE);
 
   const MENU_USR = document.createElement("button");
-  MENU_USR.innerHTML = "";
-
   const ICON_MENU = document.createElement("i");
   ICON_MENU.className = "fa-solid fa-bars";
 
@@ -225,8 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     width: "150px"
   });
 
-  let toggle = true;
-
   ICON_MENU.addEventListener("click", () => {
     if (NAV_LINKS_WEB.style.display == "none") {
       BROWSER_WEB(NAV_LINKS_WEB, {
@@ -237,19 +163,15 @@ document.addEventListener("DOMContentLoaded", function () {
         bottom: "3.4pc",
         textShadow: "2px 4px 8px #fff"
       });
-
       BROWSER_WEB(SUB_TITLE, SUB_TITLE_BLOCK);
       ICON_MENU.classList.replace("fa-bars", "fa-times");
-      toggle = false;
     } else {
       BROWSER_WEB(NAV_LINKS_WEB, {
         display: "none"
       });
-
       BROWSER_WEB(SUB_TITLE, SUB_TITLE_NONE);
       ICON_MENU.classList.replace("fa-times", "fa-bars");
-      toggle = true;
-    };
+    }
   });
 
   MENU_USR.appendChild(ICON_MENU);
@@ -263,47 +185,27 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   LINKS_MENU.forEach((link) => {
-    const UL_LINKS_WEB = document.createElement("ul");
-    const LI_LINKS_WEB = document.createElement("li");
-    const LINKS_WEB = document.createElement("a");
+    const UL = document.createElement("ul");
+    const LI = document.createElement("li");
+    const A = document.createElement("a");
 
-    LINKS_WEB.innerHTML = link.TEXT;
-    LINKS_WEB.href = link.HREF;
+    A.innerHTML = link.TEXT;
+    A.href = link.HREF;
 
-    const UL_LINKS_WEB_STYLES = {
-      listStyle: "none"
-    };
-
-    const LINKS_WEB_STYLES = {
+    BROWSER_WEB(UL, { listStyle: "none" });
+    BROWSER_WEB(A, {
       textDecoration: "none",
       fontWeight: "900",
       color: "#fff",
       fontSize: "20px"
-    };
+    });
 
-    BROWSER_WEB(UL_LINKS_WEB, UL_LINKS_WEB_STYLES);
-    BROWSER_WEB(LINKS_WEB, LINKS_WEB_STYLES);
-
-    NAV_LINKS_WEB.appendChild(UL_LINKS_WEB);
-    UL_LINKS_WEB.appendChild(LI_LINKS_WEB);
-    LI_LINKS_WEB.appendChild(LINKS_WEB);
-
-    switch (true) {
-      case window.innerWidth >= 720 && window.innerWidth <= 1024:
-        BROWSER_WEB(LINKS_WEB, {
-          position: "relative",
-          right: "40px",
-          bottom: "25px",
-          fontSize: "28px"
-        });
-        break;
-      default:
-    };
+    NAV_LINKS_WEB.appendChild(UL);
+    UL.appendChild(LI);
+    LI.appendChild(A);
   });
 
   const DATA_THEME = document.createElement("button");
-  DATA_THEME.innerHTML = "";
-
   BROWSER_WEB(DATA_THEME, ICONS_USRS);
   BROWSER_WEB(DATA_THEME, {
     position: "absolute",
@@ -318,7 +220,6 @@ document.addEventListener("DOMContentLoaded", function () {
   ICON_THEME.addEventListener("click", () => {
     const a = b.getAttribute("data-theme");
     const n = a === "dark" ? "light" : "dark";
-
     b.setAttribute("data-theme", n);
     ICON_THEME.classList.toggle("fa-moon");
     ICON_THEME.classList.toggle("sun");
@@ -330,12 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const CS = document.createElement("canvas");
   const CX = CS.getContext("2d");
 
-  CS.width = 328;
+  CS.width = 320;
   CS.height = 220;
 
   BROWSER_WEB(CS, {
     position: "relative",
-    top: "0",
     marginTop: "200px",
     marginBottom: "50px",
     backgroundColor: "#000"
@@ -349,11 +249,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function BROWSER_IMG(src, x, y, w, z) {
     const photo = new Image();
     photo.src = src;
-
     photo.onload = () => {
       CX.drawImage(photo, x, y, w, z);
     };
-  };
+  }
 
   BROWSER_IMG(URL_PHOTO[0], 1, 1, 167.8, 218.7);
   BROWSER_IMG(URL_PHOTO[1], 169, 1, 158, 219);
@@ -364,30 +263,26 @@ document.addEventListener("DOMContentLoaded", function () {
   DESCRIPTION_CANVAS.className = "description_canvas";
   DESCRIPTION_CANVAS.innerText = "RESOLUÇÃO ( 2d )";
 
-  b.appendChild(DESCRIPTION_CANVAS);
-
   BROWSER_WEB(DESCRIPTION_CANVAS, {
     fontWeight: "900",
     textDecoration: "1px underline #000",
     textAlign: "center",
     transform: "translateY(-55px)"
   });
-
-  const TEXT_CARD = document.createElement("p");
-  TEXT_CARD.innerText = "JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional).[2][3] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.[4] É atualmente a principal linguagem para programação client-side em navegadores web.";
+  b.appendChild(DESCRIPTION_CANVAS);
 
   const DIV_CARD_LAYOUT = document.createElement("div");
   const DIV_CARD_TEXT = document.createElement("div");
+  const TEXT_CARD = document.createElement("p");
+
+  TEXT_CARD.innerText = "JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional).[2][3] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.[4] É atualmente a principal linguagem para programação client-side em navegadores web.";
 
   DIV_CARD_TEXT.className = "div_card";
-
   DIV_CARD_LAYOUT.appendChild(DIV_CARD_TEXT);
   DIV_CARD_TEXT.appendChild(TEXT_CARD);
   b.appendChild(DIV_CARD_LAYOUT);
 
   BROWSER_WEB(DIV_CARD_LAYOUT, {
-    position: "relative",
-    top: "0",
     marginTop: "20px",
     padding: "20px"
   });
@@ -398,17 +293,141 @@ document.addEventListener("DOMContentLoaded", function () {
     fontWeight: "900"
   });
 
-  const FOOT_CARD = document.createElement("footer");
+  const PHOTO = [
+    "../Media/28287372737.jpg",
+    "../Media/180223505.jpg",
+    "../Media/9183742774723.jpg",
+    "../Media/026050827733.jpg"
+  ];
 
-  BROWSER_WEB(FOOT_CARD, {
-    position: "relative",
-    marginTop: "20px"
+  const GAME = document.createElement("canvas");
+  const CTX = GAME.getContext("2d");
+
+  GAME.width = 310;
+  GAME.height = 300;
+
+  BROWSER_WEB(GAME, {
+    border: "solid 2px #000",
+    backgroundColor: "#fff"
   });
 
-  DIV_CARD_LAYOUT.appendChild(FOOT_CARD);
+  let IMG_X = 100;
+  let IMG_Y = 100;
+  let IMG_P = 100;
+  let IMG_VX = 1;
+  let IMG_VY = 1;
 
+  let IMG_MOV_X = 0;
+  let IMG_MOV_Y = 0;
+
+  const PSNG = new Image();
+  PSNG.src = PHOTO[2];
+
+  function animationGame() {
+    CTX.clearRect(0, 0, GAME.width, GAME.height);
+    CTX.drawImage(PSNG, IMG_X, IMG_Y, IMG_P, IMG_P);
+
+    IMG_X += IMG_MOV_X;
+    IMG_Y += IMG_MOV_Y;
+
+    if (IMG_X < 0) IMG_X = 0;
+    if (IMG_X + IMG_P > GAME.width) IMG_X = GAME.width - IMG_P;
+    if (IMG_Y < 0) IMG_Y = 0;
+    if (IMG_Y + IMG_P > GAME.height) IMG_Y = GAME.height - IMG_P;
+
+    requestAnimationFrame(animationGame);
+  };
+
+  animationGame();
+
+  const VALUES_ENT = [
+    { id: "TOP", value: "&uarr;" },
+    { id: "RIGHT", value: "&larr;" },
+    { id: "LEFT", value: "&rarr;" },
+    { id: "BOTTOM", value: "&darr;" }
+  ];
+
+  const CONTAINER_BTN_GAME = document.createElement("div");
+
+  VALUES_ENT.forEach((prop) => {
+    const BTN = document.createElement("button");
+
+    BTN.innerHTML = prop.value;
+    BTN.id = prop.id;
+
+    CONTAINER_BTN_GAME.appendChild(BTN);
+
+    BROWSER_WEB(BTN, {
+      display: "block",
+      position: "relative",
+      width: "50px",
+      height: "50px",
+      borderRadius: "8px",
+      outline: "solid",
+      outlineWidth: "0.5px",
+      outlineColor: "#6610f2",
+      fontSize: "18px",
+      fontWeight: "bold",
+      boxShadow: "4px 8px 11px #000",
+      background: "linear-gradient(#000,#007bff)",
+      color: "#fff"
+    });
+  });
+
+  BROWSER_WEB(CONTAINER_BTN_GAME, {
+    position: "absolute",
+    left: "130px"
+  });
+
+  const DIV_GAME = document.createElement("div");
+  DIV_GAME.appendChild(GAME);
+  DIV_GAME.appendChild(CONTAINER_BTN_GAME);
+  b.appendChild(DIV_GAME);
+
+  BROWSER_WEB(DIV_GAME, {
+    backgroundImage: `url('../Media/9274520376283.jpg')`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    padding: "150px 0 158px 0",
+    border: "4px solid #000"
+  });
+
+  TOP.onclick = () => {
+    IMG_MOV_Y = -IMG_VY;
+    IMG_MOV_X = 0;
+    PSNG.src = PHOTO[0];
+  };
+
+  RIGHT.onclick = () => {
+    IMG_MOV_X = -IMG_VX;
+    IMG_MOV_Y = 0;
+    PSNG.src = PHOTO[1];
+  };
+
+  LEFT.onclick = () => {
+    IMG_MOV_X = IMG_VX;
+    IMG_MOV_Y = 0;
+    PSNG.src = PHOTO[2];
+  };
+
+  BOTTOM.onclick = () => {
+    IMG_MOV_Y = IMG_VY;
+    IMG_MOV_X = 0;
+    PSNG.src = PHOTO[3];
+  };
+
+  BROWSER_WEB(RIGHT, { right: "50px" });
+  BROWSER_WEB(LEFT, { left: "50px", bottom: "50px" });
+  BROWSER_WEB(BOTTOM, { bottom: "50px" });
+
+  const FOOT_CARD = document.createElement("footer");
   const FOOT = document.createElement("p");
+
   FOOT.innerText = "DIREITOS RESERVADOS: DEV ALEXANDRE";
+
+  BROWSER_WEB(FOOT_CARD, {
+    marginTop: "20px"
+  });
 
   BROWSER_WEB(FOOT, {
     textAlign: "center",
@@ -416,5 +435,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fontWeight: "900"
   });
 
+  DIV_CARD_LAYOUT.appendChild(FOOT_CARD);
   FOOT_CARD.appendChild(FOOT);
 });
