@@ -13,7 +13,7 @@ DEV ALEXANDRE, ESTUDANTE DE PROGRAMAÇÃO ***FULL-STACK*** [ FRONT-END ] - [ BAC
 
 ## AMBIENTE DE DESENVOLVIMENTO
 
-***SPCK Editor*** / PROJETO específico para ***DISPLAY SCREEN***, telas de exibição ***MOBILE***
+***SPCK Editor*** / ***PROJETO NÃO RESPONSIVO***
 
 
 
