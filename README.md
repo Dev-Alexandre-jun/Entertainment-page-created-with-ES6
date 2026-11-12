@@ -22,7 +22,7 @@ Aqui documento minha prática com HTML, CSS e JavaScript enquanto desenvolvo pro
 
 ---
 
-git clone 
+git clone https://github.com/Dev-Alexandre-jun/Entertainment-page-created-with-ES6.git
 
 ---
 ## Tecnologias Utilizadas  
