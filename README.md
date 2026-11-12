@@ -1,20 +1,42 @@
 # Entertainment-page-created-with-ES6
 
-***PROJETO CONCLUÍDO***, PODE NÃO SER RESPONSIVO PARA ALGUMAS TELAS OU SEGUIR ***PADRÕES*** AVANÇADOS DE ***CÓDIGO***
+# README.md 
+**README DESCRIÇÃO**
 
-## PROJETO 
+-- 
 
-SIMPLES ***WEB-PAGE*** UTILIZANDO ***ECMAScript JavaScript ES6*** - SIMPLES, NÃO SEGUINDO CONCEITOS 💡 BÁSICOS DA PROGRAMAÇÃO AVANÇADA
-
-## DESENVOLVEDOR 
-
-DEV ALEXANDRE, ESTUDANTE DE PROGRAMAÇÃO ***FULL-STACK*** [ FRONT-END ] - [ BACK-END ] AND [ CYBER SECURITY ] - [ OFFENSIVE SECURITY ]
+ **Obrigado por ter chegado até aqui** Descrição do Projeto e author
 
 
-## AMBIENTE DE DESENVOLVIMENTO
+# Projeto — version undefined
+**Developer:** Alexandre
 
-***SPCK Editor*** / ***PROJETO NÃO RESPONSIVO***
+Aprendendo desenvolvimento **Front-end** e **Back-end**.  
+Projeto ainda **pode ficar não responsivo para algumas telas**
+
+---
+
+## Descrição  
+Sou estudante de programação e este repositório faz parte do meu processo de aprendizado.  
+Aqui documento minha prática com HTML, CSS e JavaScript enquanto desenvolvo projetos, testes e interfaces experimentais projeto de entretenimento.
+
+---
+
+git clone 
+
+---
+## Tecnologias Utilizadas  
+- **HTML5**  
+- **CSS3**  
+- **JavaScript ES6**
+
+---
+
+## Ambiente de Desenvolvimento  
+- Editor: **SPCK Editor** (Galaxy A50 – mobile)  
 
 
+---
 
-***Direitos reservados: Alexandre***
+## Direitos  
+© 2025 Alexandre — Todos os direitos reservados.
