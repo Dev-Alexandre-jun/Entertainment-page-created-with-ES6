@@ -89,6 +89,7 @@ header h1 {
   font-size: clamp(20px, 5.5vw, 56px);
   font-weight: 900;
   padding: 0 64px;
+  margin-bottom: 140px;
   line-height: 1.15;
   -webkit-text-stroke: 0.4px #000;
   background-image: linear-gradient(to left, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
@@ -130,7 +131,7 @@ nav.open { display: block; }
 
 nav ul { list-style: none; }
 
-nav li { margin-bottom: 6px; }
+nav li { margin-bottom: -11px; }
 
 nav a {
   display: inline-block;
