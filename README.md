@@ -11,6 +11,7 @@
 
 **SISTEMA UTILIZADO PARA CODAR (Spck Editor and Visual Studio Code) - ( Sys-MOBILE )**
 
+--
 
  **Obrigado por ter chegado até aqui** Descrição do Projeto e author
 
