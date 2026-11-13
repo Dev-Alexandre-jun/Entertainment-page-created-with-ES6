@@ -6,6 +6,9 @@ STYLE_ROOT.textContent = `
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body, button {
   font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -78,6 +81,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 header h1 {
@@ -107,18 +111,19 @@ header h1.hidden { visibility: hidden; opacity: 0; }
   color: #fff;
   border: none;
   text-shadow: 0 0 6px #000, 0 0 12px #000;
+  z-index: 30;
 }
 
-#btn_menu { left: calc(9px + var(--safe-left)); }
+#btn_menu { left: calc(9px + var(--safe-left));}
 
-#btn_theme { right: calc(9px + var(--safe-right)); }
+#btn_theme { right: calc(9px + var(--safe-right));}
 
 nav {
   display: none;
   position: absolute;
   left: calc(14px + var(--safe-left));
   top: calc(14px + var(--safe-top));
-  z-index: 10;
+  z-index: 20;
 }
 
 nav.open { display: block; }
